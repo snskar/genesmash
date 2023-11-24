@@ -1,3 +1,4 @@
+const { MAX_ROUNDS } = require('./gameRules');
 class Game {
     constructor(player1, player2) {
       this.players = [player1, player2];
@@ -14,15 +15,15 @@ class Game {
 
       const [player1, player2] = this.players;
 
-      const action1 = player1.chooseAction(playerActions = this.player1Actions, opponentActions = this.player2Actions);
+      const action1 = player1.chooseAction(this.player1Actions, this.player2Actions);
       round[`${player1.name}-action`] = action1;
 
-      const action2 = player2.chooseAction(playerActions = this.player2Actions, opponentActions = this.player1Actions);
-      round[`${player1.name}-action`] = action2;
+      const action2 = player2.chooseAction(this.player2Actions, this.player1Actions);
+      round[`${player2.name}-action`] = action2;
 
 
-      round[`${player1.name}-scored`] = updateScore(playerAction = action1, opponentAction = action2);
-      round[`${player2.name}-scored`] = updateScore(playerAction = action2, opponentAction = action1);
+      round[`${player1.name}-scored`] = player1.updateScore(action1, action2);
+      round[`${player2.name}-scored`] = player2.updateScore(action2, action1);
   
       console.log(`${player1.name}: ${action1}, ${player2.name}: ${action2}`);
 
@@ -36,10 +37,20 @@ class Game {
         round = this.playRound(i);
         this.rounds.push(round);
       }
-  
+
+      this.results['player1Score'] = this.players[0].score;
+      this.results['player2Score'] = this.players[1].score;
+      if(this.players[0].score === this.players[1].score){
+        this.results.winner = 'draw';
+      } else {
+        this.results.winner = this.players[0].score > this.players[1].score? this.players[0].name:this.players[1].name;
+      }
+
       console.log('Game Over');
       console.log(`${this.players[0].name}'s Score: ${this.players[0].score}`);
       console.log(`${this.players[1].name}'s Score: ${this.players[1].score}`);
     }
   }
+
+  module.exports = Game;
   

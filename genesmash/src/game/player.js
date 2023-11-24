@@ -1,9 +1,9 @@
-import {
+const {
     MUTUAL_COOPERATION,
     MUTUAL_DEFECTION,
     TAKING_ADVANTAGE,
     TAKEN_ADVANTAGE,
-} from './gameRules';
+}  = require('./gameRules');
 
 class Player {
   constructor(name, strategy) {
@@ -29,8 +29,8 @@ class Player {
         scored = MUTUAL_DEFECTION;
     }
     this.score += scored;
-    return scored;
+    return scored
   }
 }
 
-export default Player;
+module.exports = Player;

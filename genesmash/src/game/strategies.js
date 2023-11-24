@@ -27,7 +27,7 @@ class TitForTat {
     }
 }
 
-export {
+module.exports = {
     Cooperate,
     Defect,
     TitForTat,
