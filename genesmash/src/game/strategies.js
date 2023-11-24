@@ -26,3 +26,10 @@ class TitForTat {
         return rounds[rounds.length -1] && rounds[rounds.length -1].opponentName;
     }
 }
+
+export {
+
+    Cooperate,
+    Defect,
+    TitForTat,
+};
