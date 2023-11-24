@@ -2,7 +2,7 @@ class Cooperate {
     
     static name = 'Cooperate';
     static description = 'Player always cooperates';
-    chooseAction(rounds = []) {
+    chooseAction(playerActions, opponentActions) {
         return 'cooperate';
     }
 }
@@ -11,7 +11,7 @@ class Defect {
     
     static name = 'Defect';
     static description = 'Player always defects';
-    chooseAction(rounds = []) {
+    chooseAction(playerActions, opponentActions) {
         return 'defect';
     }
 }
@@ -19,16 +19,15 @@ class Defect {
 class TitForTat {
     static name = 'Tit for Tat';
     static description = 'A simple strategy in which the player always plays the last move of the opponent, rewarding nice players and retaliating against cheaters';
-    chooseAction(rounds = [], opponentName) {
-        if(rounds.length < 1){
+    chooseAction(playerActions, opponentActions) {
+        if(opponentActions && opponentActions.length < 1){
             return 'cooperate';
         }
-        return rounds[rounds.length -1] && rounds[rounds.length -1].opponentName;
+        return opponentActions && opponentActions[opponentActions.length -1];
     }
 }
 
 export {
-
     Cooperate,
     Defect,
     TitForTat,
