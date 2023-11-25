@@ -1,4 +1,5 @@
-export function getRandomInt(min = 0, max = 1000000) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+// This function returns true with a p% probability
+export function percentageProbability (p){
+    return (Math.random()*100) <= p;
 }
 

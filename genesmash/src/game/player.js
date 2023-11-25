@@ -1,4 +1,4 @@
-import { MUTUAL_COOPERATION, MUTUAL_DEFECTION, TAKING_ADVANTAGE, TAKEN_ADVANTAGE } from './gameRules.js';
+import { MUTUAL_COOPERATION, MUTUAL_DEFECTION, TAKING_ADVANTAGE, TAKEN_ADVANTAGE, COOPERATE, DEFECT } from './gameRules.js';
 
 class Player {
   constructor(name, strategy) {
@@ -14,13 +14,13 @@ class Player {
   updateScore(playerAction, opponentAction) {
 
     let scored = 0;
-    if(playerAction === 'cooperate' && opponentAction === 'defect'){
+    if(playerAction === COOPERATE && opponentAction === DEFECT){
         scored = TAKEN_ADVANTAGE;
-    } else if (playerAction === 'cooperate' && opponentAction === 'cooperate'){
+    } else if (playerAction === COOPERATE && opponentAction === COOPERATE){
         scored = MUTUAL_COOPERATION;
-    } else if (playerAction === 'defect' && opponentAction === 'cooperate'){
+    } else if (playerAction === DEFECT && opponentAction === COOPERATE){
         scored = TAKING_ADVANTAGE;
-    } else if (playerAction === 'defect' && opponentAction === 'defect'){
+    } else if (playerAction === DEFECT && opponentAction === DEFECT){
         scored = MUTUAL_DEFECTION;
     }
     this.score += scored;
