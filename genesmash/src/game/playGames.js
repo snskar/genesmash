@@ -2,7 +2,7 @@ import Player from './player.js';
 import { strategies } from './strategies.js';
 import Game from './game.js';
 
-const strategy1 = strategies.SeeSaw;
+const strategy1 = strategies.Random;
 const strategy2 = strategies.TitForTat;
 
 const player1 = new Player('Alice', strategy1);

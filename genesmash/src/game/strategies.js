@@ -1,3 +1,5 @@
+import { getRandomInt } from "./util.js";
+
 export const strategies = {
 
     Cooperate : {
@@ -49,10 +51,7 @@ export const strategies = {
         name : 'Random',
         description : 'Player randomly selects a move.',
         chooseAction : function(playerActions, opponentActions) {
-            if(playerActions.length < 1){
-                return 'cooperate';
-            }
-            return playerActions[playerActions.length -1] === 'cooperate'?'defect':'cooperate';
+            return getRandomInt()%2 === 0? 'cooperate':'defect';
         },
     }, 
 }
