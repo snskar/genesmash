@@ -1,6 +1,6 @@
-import Player from './player';
-import { strategies } from './strategies';
-import Game from './game';
+import Player from './player.js';
+import { strategies } from './strategies.js';
+import Game from './game.js';
 
 const strategy1 = strategies.SeeSaw;
 const strategy2 = strategies.TitForTat;

@@ -1,4 +1,4 @@
-import { MUTUAL_COOPERATION, MUTUAL_DEFECTION, TAKING_ADVANTAGE, TAKEN_ADVANTAGE } from './gameRules';
+import { MUTUAL_COOPERATION, MUTUAL_DEFECTION, TAKING_ADVANTAGE, TAKEN_ADVANTAGE } from './gameRules.js';
 
 class Player {
   constructor(name, strategy) {

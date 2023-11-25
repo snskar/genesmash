@@ -1,4 +1,4 @@
-import { MAX_ROUNDS } from './gameRules';
+import { MAX_ROUNDS } from './gameRules.js';
 class Game {
     constructor(player1, player2) {
       this.players = [player1, player2];
