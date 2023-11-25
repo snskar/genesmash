@@ -1,4 +1,4 @@
-module.exports.MUTUAL_COOPERATION = 3;
-module.exports.MUTUAL_DEFECTION = 1;
-module.exports.TAKING_ADVANTAGE = 5;
-module.exports.MAX_ROUNDS = 10;
+export const MUTUAL_COOPERATION = 3;
+export const MUTUAL_DEFECTION = 1;
+export const TAKING_ADVANTAGE = 5;
+export const MAX_ROUNDS = 10;

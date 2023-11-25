@@ -1,9 +1,4 @@
-const {
-    MUTUAL_COOPERATION,
-    MUTUAL_DEFECTION,
-    TAKING_ADVANTAGE,
-    TAKEN_ADVANTAGE,
-}  = require('./gameRules');
+import { MUTUAL_COOPERATION, MUTUAL_DEFECTION, TAKING_ADVANTAGE, TAKEN_ADVANTAGE } from './gameRules';
 
 class Player {
   constructor(name, strategy) {
@@ -18,7 +13,7 @@ class Player {
 
   updateScore(playerAction, opponentAction) {
 
-    let scored;
+    let scored = 0;
     if(playerAction === 'cooperate' && opponentAction === 'defect'){
         scored = TAKEN_ADVANTAGE;
     } else if (playerAction === 'cooperate' && opponentAction === 'cooperate'){
@@ -33,4 +28,4 @@ class Player {
   }
 }
 
-module.exports = Player;
+export default Player;

@@ -1,4 +1,4 @@
-const { MAX_ROUNDS } = require('./gameRules');
+import { MAX_ROUNDS } from './gameRules';
 class Game {
     constructor(player1, player2) {
       this.players = [player1, player2];
@@ -21,6 +21,8 @@ class Game {
       const action2 = player2.chooseAction(this.player2Actions, this.player1Actions);
       round[`${player2.name}-action`] = action2;
 
+      this.player1Actions.push(action1)
+      this.player2Actions.push(action2);
 
       round[`${player1.name}-scored`] = player1.updateScore(action1, action2);
       round[`${player2.name}-scored`] = player2.updateScore(action2, action1);
@@ -52,5 +54,5 @@ class Game {
     }
   }
 
-  module.exports = Game;
+  export default Game;
   
