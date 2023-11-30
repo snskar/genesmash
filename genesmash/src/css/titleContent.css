@@ -1,0 +1,26 @@
+.title-subtitle-container {
+
+    font-smooth: never;
+   -webkit-font-smoothing : none; 
+    text-align: center;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .upper-subtitle {
+    font-size: 1.5em;
+    color: #666; /* Adjust the color as needed */
+  }
+
+  .lower-subtitle {
+    font-size: 1.5em;
+    color: #666; /* Adjust the color as needed */
+  }
+  
