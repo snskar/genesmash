@@ -1,0 +1,16 @@
+@import 'fonts.css';
+
+h1 {
+    font-family: 'PixlifySansBold';
+    color: #ffe4f1;
+  }   
+
+h2 {
+    font-family: 'PixlifySansSemiBold';
+    color: #ffe4f1;
+  }
+
+body {
+    font-family: 'PixlifySans', 'sans-serif';
+  }
+  

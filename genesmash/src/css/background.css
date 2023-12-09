@@ -1,0 +1,11 @@
+/* BackgroundImageComponent.css */
+.background-image {
+    background-image: url('../../public/backgroundArt/bg4-edited.png');
+    background-size: cover;
+    background-position: center; 
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

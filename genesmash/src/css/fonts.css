@@ -1,0 +1,41 @@
+  @font-face {
+    font-family: 'PixlifySansBold';
+    src: url('../../public/fonts/Pixelify_Sans/static/PixelifySans-Bold.ttf') format('truetype'),
+         url('../../public/fonts/Pixelify_Sans/static/PixelifySans-Bold.ttf') format('woff'),
+         url('../../public/fonts/Pixelify_Sans/static/PixelifySans-Bold.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'PixlifySansSemiBold';
+    src: url('../../public/fonts/Pixelify_Sans/static/PixelifySans-SemiBold.ttf') format('truetype'),
+         url('../../public/fonts/Pixelify_Sans/static/PixelifySans-SemiBold.ttf') format('woff'),
+         url('../../public/fonts/Pixelify_Sans/static/PixelifySans-SemiBold.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'PixlifySansRegular';
+    src: url('../../public/fonts/Pixelify_Sans/static/PixelifySans-Regular.ttf') format('truetype'),
+         url('../../public/fonts/Pixelify_Sans/static/PixelifySans-Regular.ttf') format('woff'),
+         url('../../public/fonts/Pixelify_Sans/static/PixelifySans-Regular.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'PixlifySansMedium';
+    src: url('../../public/fonts/Pixelify_Sans/static/PixelifySans-Medium.ttf') format('truetype'),
+         url('../../public/fonts/Pixelify_Sans/static/PixelifySans-Medium.ttf') format('woff'),
+         url('../../public/fonts/Pixelify_Sans/static/PixelifySans-Medium.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'PixlifySansVariable';
+    src: url('../../public/fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf') format('truetype'),
+         url('../../public/fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf') format('woff'),
+         url('../../public/fonts/Pixelify_Sans/PixelifySans-VariableFont_wght.ttf') format('woff2');
+    font-weight: 100 1000;
+    font-style: normal;
+  }

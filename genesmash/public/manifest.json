@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Gene Smash",
+  "name": "Iterated Prisoner's Dilemma - Gene Smash",
   "icons": [
     {
       "src": "favicon.ico",
