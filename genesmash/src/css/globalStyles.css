@@ -1,16 +1,30 @@
 @import 'fonts.css';
+@import 'titleContent.css';
+@import 'background.css';
+@import 'playerCard.css';
+@import 'board.css';
+@import 'playButton.css';
 
 h1 {
     font-family: 'PixlifySansBold';
-    color: #ffe4f1;
+    color: #ff4d7f;
   }   
 
 h2 {
     font-family: 'PixlifySansSemiBold';
+    font-size: 1.5vw;
+    color: #ff4d7f;
+  }
+
+p {
+    font-family: 'PixlifySansRegular';
+    font-size: 1vw;
     color: #ffe4f1;
   }
 
 body {
-    font-family: 'PixlifySans', 'sans-serif';
+    font-family: 'PixlifySansRegular';
+    font-size:medium;
+    color: #ffe4f1;
   }
   

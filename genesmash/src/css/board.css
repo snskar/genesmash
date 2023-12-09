@@ -1,0 +1,57 @@
+.board {
+
+    position:absolute;
+    top: 25%;
+    width:70%;
+    left:50%;
+    transform: translate(-50%);
+    height: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.board-card {
+
+    width:35%;
+}
+
+#board-left-card {
+
+    top: 0%;
+    left: 10%;
+
+}
+
+#board-right-card {
+
+    top:0%;
+    right:10%;
+}
+
+.play-game {
+
+    position: absolute;
+    left:50%;
+    transform: translate(-50%, 0%);
+    display: flex;
+    flex-direction: column;
+    width:auto;
+
+}
+
+#minimal-description {
+
+    top:80%;
+    width:40%;
+    text-align: justify;
+    font-size: 0.7vw;
+}
+
+#main-play-button {
+
+    border: none;
+    background-color: transparent;
+}

@@ -5,7 +5,7 @@ export const strategies = {
 
     Cooperate : {
         
-        id: 1,
+        id: 0,
         name : 'Cooperate',
         description : 'Player always cooperates.',
         chooseAction : function(playerActions, opponentActions) {
@@ -15,7 +15,7 @@ export const strategies = {
 
     Defect : {
         
-        id : 2,
+        id : 1,
         name : 'Defect',
         description : 'Player always defects.',
         chooseAction : function(playerActions, opponentActions) {
@@ -24,8 +24,10 @@ export const strategies = {
     },
      
     TitForTat :  {
-        id : 3,
+        id : 2,
         name : 'Tit-for-Tat',
+        player: 'Themis',
+        imgPath: process.env.PUBLIC_URL + '/characterArt/themis/themis-transparent.png',
         description : 'A simple strategy in which the player always plays the last move of the opponent, rewarding nice players and retaliating against cheaters.',
         chooseAction : function(playerActions, opponentActions) {
             if(opponentActions.length < 1){
@@ -36,7 +38,7 @@ export const strategies = {
     },
     
     SeeSaw :  {
-        id : 4,
+        id : 3,
         name : 'See-Saw',
         description : 'Player starts with cooperate and then keeps flipping between cooperate and defect options alternatively.',
         chooseAction : function(playerActions, opponentActions) {
@@ -48,7 +50,7 @@ export const strategies = {
     }, 
 
     Random :  {
-        id : 5,
+        id : 4,
         name : 'Random',
         description : 'Player randomly selects a move.',
         chooseAction : function(playerActions, opponentActions) {
@@ -57,7 +59,7 @@ export const strategies = {
     }, 
 
     Pavlov :  {
-        id : 6,
+        id : 5,
         name : 'Pavlov',
         description : 'If las mve was successful hen cninue i herwise swich i up',
         chooseAction : function(playerActions, opponentActions) {
@@ -76,7 +78,7 @@ export const strategies = {
     }, 
 
     GoodCop :  {
-        id : 7,
+        id : 6,
         name : 'Good-Cop',
         description : 'Player cooperates with a 75% probability, ignorant of opponents moves.',
         chooseAction : function(playerActions, opponentActions) {
@@ -85,7 +87,7 @@ export const strategies = {
     }, 
 
     BadCop :  {
-        id : 8,
+        id : 7,
         name : 'Bad-Cop',
         description : 'Player defects with a 75% probability, ignorant of opponents moves.',
         chooseAction : function(playerActions, opponentActions) {

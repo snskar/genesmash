@@ -1,28 +1,60 @@
-@import 'fonts.css';
-@import 'globalStyles.css';
-
-.title-subtitle-container {
+  .title-content-container {
 
     text-align: center;
     position: absolute;
-    top: 25%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-55%, -50%);
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+    align-content: stretch;
+    max-height: fit-content;
+    margin-bottom: 5vw;
   }
   
+  .logo-icon-container {
+
+    flex: 0 0 auto; /* Don't grow or shrink, maintain its initial size */
+    margin-right: 1 rem;
+    align-self: flex-start;
+  }
+
+  .logo-icon-container img {
+
+    width: 6vw; 
+    height: auto;
+    transform: translate(5%, -8%); /* Center the image precisely using the translate transform */
+    max-width: 100%; /* Ensure the image does not exceed the container width */
+    max-height: 100%; /* Ensure the image does not exceed the container height */
+  }
+
+  .title-text-container {
+
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+  }
+
   .title {
     color: #ff4d7f;
     font-size: 4.5rem;
     margin-top: -1rem;
-    display: inline-block; /* Ensures the container only takes the width of the text */
+    margin-bottom: -2vw;
+    /* display: inline-block; Ensures the container only takes the width of the text */
     overflow: hidden;
+    max-height: 100;
     transition: font-size 0.3s ease-in-out;
     text-shadow: 0 4px 6px rgba(34, 4, 11, 0.1);
-    
+    font-size: 4.2vw;
   }
   
   .title:hover {
-    font-size: 5rem; /* Increase font size on hover */
+    font-size: 4.6vw; /* Increase font size on hover */
     animation: bounce 0.5s infinite alternate;
     animation: wave 1.2s infinite alternate;
   }
@@ -33,7 +65,8 @@
     }
   }
   .upper-subtitle {
-    font-size: 1.8rem;
+    font-size: 1.7vw;
+    color:#ffe4f1;
      /* Adjust the color as needed */
   }
 
@@ -43,3 +76,21 @@
     font-size: 1.2rem;
   }
   
+  /* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .logo-icon-container {
+    margin-right: 0.5rem;
+  }
+
+  .upper-subtitle {
+    font-size: 1rem;
+  }
+
+  .lower-subtitle {
+    font-size: 1rem;
+  }
+}

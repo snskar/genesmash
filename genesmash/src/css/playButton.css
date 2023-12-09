@@ -1,0 +1,35 @@
+.play-button button {
+
+    width:100%;
+    height:auto;
+
+}
+
+#main-play-button{
+
+    border: none;
+    background-color: transparent;
+}
+
+#main-play-button img {
+
+    width: 100%;
+    height: auto;
+
+}
+
+#play-button-desc {
+   
+    top:50%;
+
+    width:100%;
+    left:50%;
+
+    text-align: center;
+    justify-content: center;
+
+}
+
+.play-button button:hover {
+    transform: scale(1.2); /* Enlarge the button by 10% on hover */
+}

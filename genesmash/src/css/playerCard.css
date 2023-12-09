@@ -1,0 +1,53 @@
+.player-card {
+
+    /* position:absolute; */
+    /* top: 33%; */
+    /* width: 20%; */
+    /* height: 50%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+#left {
+    left:20%;
+}
+
+#right {
+    right: 20%;
+}
+
+#player-card-img {
+    width:80%;
+    height:auto;
+}
+
+#player-card-img:hover {
+    transform: scale(1.1);
+}
+
+#right-nav-button {
+    border: none;
+    background-color: transparent;
+}
+#left-nav-button {
+    border: none;
+    background-color: transparent;
+}
+.nav-button img{
+    height: 1.5vw;
+    width: auto;
+}
+
+.strategy-change {
+    height:10%;
+    width: auto;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    color:#ff4d7f
+}
+
+

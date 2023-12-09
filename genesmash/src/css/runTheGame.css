@@ -1,0 +1,41 @@
+  .description-play-container {
+    text-align: justify;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 50vw;
+    height: 80vw
+
+  }
+  .main-page-description {
+
+    top: 80%;
+    font-size:2vw;
+    margin: 2vw;
+        
+  }
+
+  .play-icon-container {
+
+    width:100%;
+    margin: 2vw;
+    justify-content: center;
+    height:auto;
+  }
+
+  .play-icon-container img {
+
+    width:4vw;
+    height:auto;
+  }
+
+  @media screen and (max-width: 768px) {
+    .description-play-container {
+        font-size: 2rem;
+        width: 90%;
+      }
+  }
