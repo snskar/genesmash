@@ -6,7 +6,9 @@ export const strategies = {
     Cooperate : {
         
         id: 0,
+        player: 'Goody Two Shoes',
         name : 'Cooperate',
+        imgPath: process.env.PUBLIC_URL + '/characterArt/themis/themis-transparent.png',
         description : 'Player always cooperates.',
         chooseAction : function(playerActions, opponentActions) {
             return COOPERATE;
@@ -16,7 +18,9 @@ export const strategies = {
     Defect : {
         
         id : 1,
+        player: 'Salazar',
         name : 'Defect',
+        imgPath: process.env.PUBLIC_URL + '/characterArt/themis/themis-transparent.png',
         description : 'Player always defects.',
         chooseAction : function(playerActions, opponentActions) {
             return DEFECT;
@@ -39,7 +43,9 @@ export const strategies = {
     
     SeeSaw :  {
         id : 3,
+        player: 'Thanos',
         name : 'See-Saw',
+        imgPath: process.env.PUBLIC_URL + '/characterArt/themis/themis-transparent.png',
         description : 'Player starts with cooperate and then keeps flipping between cooperate and defect options alternatively.',
         chooseAction : function(playerActions, opponentActions) {
             if(playerActions.length < 1){
@@ -52,6 +58,8 @@ export const strategies = {
     Random :  {
         id : 4,
         name : 'Random',
+        player: 'Logan',
+        imgPath: process.env.PUBLIC_URL + '/characterArt/themis/themis-transparent.png',
         description : 'Player randomly selects a move.',
         chooseAction : function(playerActions, opponentActions) {
             return percentageProbability(50)? COOPERATE : DEFECT;
@@ -61,6 +69,8 @@ export const strategies = {
     Pavlov :  {
         id : 5,
         name : 'Pavlov',
+        player: 'Pavlov',
+        imgPath: process.env.PUBLIC_URL + '/characterArt/themis/themis-transparent.png',
         description : 'If las mve was successful hen cninue i herwise swich i up',
         chooseAction : function(playerActions, opponentActions) {
             if(playerActions.length < 1){
@@ -80,6 +90,8 @@ export const strategies = {
     GoodCop :  {
         id : 6,
         name : 'Good-Cop',
+        player: 'Gordon',
+        imgPath: process.env.PUBLIC_URL + '/characterArt/themis/themis-transparent.png',
         description : 'Player cooperates with a 75% probability, ignorant of opponents moves.',
         chooseAction : function(playerActions, opponentActions) {
             return percentageProbability(75)? COOPERATE : DEFECT;
@@ -89,6 +101,8 @@ export const strategies = {
     BadCop :  {
         id : 7,
         name : 'Bad-Cop',
+        player: 'Norm Scully',
+        imgPath: process.env.PUBLIC_URL + '/characterArt/themis/themis-transparent.png',
         description : 'Player defects with a 75% probability, ignorant of opponents moves.',
         chooseAction : function(playerActions, opponentActions) {
             return percentageProbability(75)? DEFECT : COOPERATE;

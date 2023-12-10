@@ -1,10 +1,37 @@
 import React from 'react';
 import '../css/playButton.css';
+import { playGame } from '../game/playGames.js';
+import Game from '../game/game.js';
+import { useNavigate } from 'react-router-dom';
 
 
-const PlayButton = () => {
+const PlayButton = ({
+    player1Id, 
+    player2Id, 
+    // game, 
+    // setGame
+}) => {
+    const navigate = useNavigate();
+    const handlePlayButton = () => {
+        
+        const newGame = playGame(player1Id, player2Id);
+        const rounds = newGame.rounds;
+        console.log(rounds);
 
-    const handlePlayButton = () => {};
+        console.log('this my marker man');
+        console.log(newGame.players);
+
+        // setGame(newGame);
+
+        const gameDataStripped = {
+            strategyIds : [newGame.players[0].strategy.id, newGame.players[1].strategy.id],
+            rounds: newGame.rounds,
+            scores: [newGame.players[0].score, newGame.players[1].score],
+        }
+
+        navigate('/results', { state : gameDataStripped });
+
+    };
     const handleMouseEnter = () => {};
     const handleMouseLeave = () => {};
 

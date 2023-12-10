@@ -4,6 +4,7 @@
 @import 'playerCard.css';
 @import 'board.css';
 @import 'playButton.css';
+@import 'playerResultCard.css';
 
 h1 {
     font-family: 'PixlifySansBold';

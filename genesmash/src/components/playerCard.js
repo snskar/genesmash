@@ -1,22 +1,10 @@
 import React, { useState } from 'react';
 import { strategies } from '../game/strategies.js';
+import { getStrategyById } from './util.js';
 
-function getStrategyById(id) {
-    for (const strategyKey in strategies) {
-      if (strategies.hasOwnProperty(strategyKey)) {
-        const strategy = strategies[strategyKey];
-        if (strategy.id === id) {
-          return strategy;
-        }
-      }
-    }
-    return null; // Return null if no strategy with the given id is found
-  }
-const PlayerCard = ({sideAligned, defaultId}) => {
+const PlayerCard = ({currentStrategyId, setStrategyId}) => {
 
-  console.log(sideAligned);
-
-  const [currentStrategyId, setStrategyId] = useState(2);
+//   const [currentStrategyId, setStrategyId] = useState(2);
   const currentStrategy = getStrategyById(currentStrategyId);
 
   const handlePrevStrategy = () => {
@@ -50,7 +38,7 @@ const PlayerCard = ({sideAligned, defaultId}) => {
 
   return (
 
-    <div className='player-card' id = {sideAligned}>
+    <div className='player-card'>
       <img 
         id = 'player-card-img'
         src={currentStrategy.imgPath} 

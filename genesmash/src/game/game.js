@@ -11,24 +11,24 @@ class Game {
     playRound(number) {
 
       let round = {};
-      round['Round-Number'] = number;
+      // round['Round-Number'] = number + 1;
 
       const [player1, player2] = this.players;
 
       const action1 = player1.chooseAction(this.player1Actions, this.player2Actions);
-      round[`${player1.name}-Action`] = action1;
+      round[`Player 1 : ${player1.name} Action`] = action1;
 
       const action2 = player2.chooseAction(this.player2Actions, this.player1Actions);
-      round[`${player2.name}-Action`] = action2;
+      round[`Player 2 : ${player2.name} Action`] = action2;
 
       this.player1Actions.push(action1)
       this.player2Actions.push(action2);
 
-      round[`${player1.name}-Scored`] = player1.updateScore(action1, action2);
-      round[`${player2.name}-Scored`] = player2.updateScore(action2, action1);
+      round[`Player 1 : ${player1.name} Scored`] = player1.updateScore(action1, action2);
+      round[`Player 2 : ${player2.name} Scored`] = player2.updateScore(action2, action1);
   
       console.log(`${player1.name}: ${action1}, ${player2.name}: ${action2}`);
-      this.rounds.push(round);
+      // this.rounds.push(round);
 
       return round;
     }
