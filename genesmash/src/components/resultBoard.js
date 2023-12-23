@@ -10,22 +10,7 @@ const ResultBoard = () => {
 
   const location = useLocation();
   const gameData = location.state;
-  console.log('This is a marker goddamit');
-  console.log(gameData);
-  const winnerProps = {
-    playerId:2,
-    winnerStatus: 'winner',
-    pointsScored: 5000,
-  }
-
-  const loserProps = {
-    playerId: 2, 
-    winnerStatus: 'loser',
-    pointsScored: 1250,
-  }
-
   let player1WinStatus, player2WinStatus;
-
   if(gameData.scores[0] === gameData.scores[1]){
     player1WinStatus = 'draw';
     player2WinStatus = 'draw';
@@ -56,7 +41,7 @@ const ResultBoard = () => {
       <div className='board-card' id = 'board-left-card'>
         <PlayerResultCard {...player1Props} />
       </div>
-      <div className='play-game'>
+      <div className='result-section'>
         <ResultDeclaration {...rounds}/>
       </div>
       <div className='board-card' id = 'board-right-card'>
